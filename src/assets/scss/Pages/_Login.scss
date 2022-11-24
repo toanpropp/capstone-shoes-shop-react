@@ -1,0 +1,96 @@
+@import '../Themes/mixin';
+@import '../Themes/variable';
+
+.login-form {
+    padding: 120px 0;
+
+    .container {
+        .title {
+            @include text($text-fz-4xl, $text-fw-regular, $text-color-primary);
+        }
+
+        .login {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .form {
+                .form-group {
+                    p {
+                        @include text ($text-fz-xl, $text-fw-regular, $text-color-10th);
+                        margin-bottom: 4px;
+                        margin-top: 15px;
+
+                    }
+
+                    #email {
+                        padding: 10px 15px;
+                        border: none;
+                        background-color: $bg-8th;
+                        width: 400px;
+                        border-radius: 5px;
+                        outline: none;
+                    }
+
+                    #password {
+                        padding: 10px 15px;
+                        border: none;
+                        background-color: $bg-8th;
+                        width: 400px;
+                        border-radius: 5px;
+                        outline: none;
+
+                    }
+
+                    .register-login {
+                        margin-top: 20px;
+                        display: flex;
+                        justify-content: flex-end;
+                        align-items: center;
+
+                        .register {
+                            margin-right: 70px;
+                            font-style: normal;
+                            font-weight: 500;
+                            font-size: 18px;
+                            line-height: 24px;
+                            /* identical to box height, or 133% */
+
+                            letter-spacing: 0.135px;
+
+                            color: rgba(21, 42, 235, 0.8);
+                            text-decoration: none;
+
+                            &:hover {
+                                color: red;
+                                transition: all 0.3s
+                            }
+                        }
+
+                        .btn-login {
+                            @include button($text-fz-sm, $text-fw-light, $text-color-3nd, $bg-10th, 12px, none, 0, $text-color-3nd, $bg-3nd, none);
+                            border-radius: 50px;
+                            text-transform: uppercase;
+                            transition: all 0.3s;
+                        }
+                    }
+
+                    .login-facebook {
+                        .btn-facebook {
+                            margin-top: 20px;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            transition: all 0.3s;
+                            .anticon {
+                                font-size: 40px;
+                                margin-right: 20px;
+                            }
+                        }
+
+                    }
+                }
+            }
+        }
+    }
+}

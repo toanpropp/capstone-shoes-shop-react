@@ -1,0 +1,72 @@
+@import '../Themes/mixin';
+@import '../Themes/variable';
+
+.cart-shoes {
+    padding: 120px 0;
+
+    .cart-title {
+        margin-top: 40px;
+        text-align: left;
+        @include text($text-fz-4xl, $text-fw-regular, $text-color-primary);
+        margin-bottom: 100px;
+    }
+
+    .cart-form {
+        .container {
+            .table {
+                thead {
+                    tr {
+                        line-height: 50px;
+                        td {
+                            input {
+                                background-color: #002B4E !important;
+                                color: white;
+                            }
+                            padding: 20px;
+
+                            :first-child {
+                                padding: 0 20px;
+                            }
+                        }
+                    }
+                }
+
+                tbody {
+                    tr {
+                        td {
+                            padding: 20px;
+
+                            :first-child {
+                                padding: 0 20px;
+                            }
+
+                            .btn-edit {
+                                text-transform: uppercase;
+                                transition: all 0.5s;
+                                @include button($text-fz-sm, $text-fw-semibold, $text-color-3nd, $bg-10th, 6px 6px 6px 8px, none, 4px, $text-color-5th, $bg-3nd, none)
+                            }
+
+                            .btn-del {
+                                text-transform: uppercase;
+                                transition: all 0.5s;
+                                @include button($text-fz-sm, $text-fw-semibold, $text-color-3nd, $bg-11th, 6px 6px 6px 8px, none, 4px, $text-color-5th, $bg-3nd, none)
+                            }
+                        }
+                    }
+                }
+
+                tfoot {
+                    text-align: right;
+                    td{
+                        .order {
+                            margin-top: 20px;
+                            text-transform: uppercase;
+                            transition: all 0.5s;
+                            @include button($text-fz-sm, $text-fw-semibold, $text-color-3nd, $bg-12th, 6px 6px 6px 8px, none, 4px, $text-color-5th, $bg-3nd, none)
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

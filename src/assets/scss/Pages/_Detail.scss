@@ -1,0 +1,203 @@
+@import '../Themes/mixin';
+@import '../Themes/variable';
+
+.detail {
+    padding: 120px 0;
+
+    .product-cart {
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+
+            .img {
+                width: 40%;
+                padding: 0 30px;
+                background-color: $bg-4th;
+
+                img {
+                    width: 100%;
+                    object-fit: cover;
+                }
+            }
+
+            .item-info {
+                width: 60%;
+                padding: 20px 40px;
+
+                .name {
+                    @include text ($text-fz-3xl, $text-fw-light, $text-color-primary);
+                }
+
+                .des {
+                    @include text ($text-fz-md, $text-fw-light, $text-color-6th);
+                }
+
+                .product-size {
+                    h4 {
+                        margin-bottom: 20px;
+                        @include text ($text-fz-2xxl, $text-fw-semibold, $text-color-4th)
+                    }
+
+                    .size {
+                        span {
+                            cursor: pointer;
+                            background-color: $bg-8th;
+                            padding: 3px;
+                            margin-right: 5px;
+                            @include text ($text-fz-2xxl, $text-fw-bold, $text-color-7th);
+
+                            // margin-bottom: 20px;
+                            &:hover {
+                                background-color: $bg-primary;
+                                transition: all 0.3s;
+                            }
+
+                            &:last-child {
+                                margin: 0;
+                            }
+                        }
+                    }
+                }
+
+                .cost {
+                    margin: 20px 0;
+                    @include text ($text-fz-3xl, $text-fw-bold, $text-color-5th);
+                }
+
+                .plus-minus {
+                    margin-bottom: 30px;
+
+                    .plus {
+                        cursor: pointer;
+                        display: inline-block;
+                        font-size: 24px;
+                        color: white;
+                        padding: 10px 15px;
+                        line-height: 1;
+                        background-image: linear-gradient(#6181f3, #7c97f5);
+
+                        &:hover {
+                            background-color: #d017ee;
+                        }
+                    }
+
+                    .quantity {
+                        @include text ($text-fz-3xl, $text-fw-bold, $text-color-5th);
+                        margin: 0 20px;
+
+                    }
+
+                    .minus {
+                        cursor: pointer;
+                        display: inline-block;
+                        padding: 10px 15px;
+                        font-size: 24px;
+                        color: white;
+
+                        line-height: 1;
+                        background-image: linear-gradient(#6181f3, #7c97f5);
+
+                        &:hover {
+                            background-color: #d017ee;
+                        }
+                    }
+                }
+
+                .btn-addtocart {
+                    font-size: $text-fz-2xxl ;
+                    font-weight: $text-fw-regular ;
+                    color: $text-color-8th;
+                    background-image: linear-gradient(270deg, rgba(62, 32, 248, 0.9) 5.14%, #d017ee 89.71%);
+                    padding: 10px 30px;
+                    border: none;
+                    border-radius: 0;
+                    opacity: 1;
+
+                    &:hover {
+                        color: yellow;
+                        background-image: linear-gradient(#6181f3, #7c97f5);
+                        border: none;
+                        transition: all 0.5s;
+                    }
+                }
+            }
+        }
+
+    }
+}
+
+.product-relate {
+    padding: 50px 0;
+
+    h3 {
+        text-align: center;
+        @include text($text-fz-4xl, $text-fw-regular, $text-color-primary);
+        margin-bottom: 100px;
+    }
+
+    .container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 30px;
+
+        .product-item {
+            background-color: $bg-primary;
+            display: flex;
+            flex-direction: column;
+            box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+
+            .cart-info {
+                flex-grow: 1;
+
+                .img {
+                    padding: 45px 57px 0 57px;
+
+                    img {
+                        width: 100%;
+                        object-fit: cover;
+                    }
+                }
+
+                .name-des {
+                    padding: 10px 20px;
+                    display: flex;
+                    flex-direction: column;
+
+                    .name {
+                        flex: 1;
+                        @include text ($text-fz-2xl, $text-fw-light, $text-color-2nd);
+                    }
+
+                    .des {
+                        flex: 1;
+                        @include text ($text-fz-2xl, $text-fw-light, $text-color-2nd);
+                    }
+                }
+            }
+
+            .buy-cost {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                .btn-buy {
+                    width: 50%;
+                    text-decoration: none;
+                    text-align: center;
+                    transition: all 0.5s;
+                    @include button($text-fz-2xxl, $text-fw-light, $text-color-primary, $bg-9th, 10px 30px, none, 0, $text-color-3nd, $bg-3nd, none);
+                }
+
+                .cost {
+                    width: 50%;
+                    padding: 10px 30px;
+                    background-color: $bg-7th;
+                    text-align: center;
+                    @include text ($text-fz-2xxl, $text-fw-semibold, $text-color-primary);
+                }
+            }
+        }
+    }
+}

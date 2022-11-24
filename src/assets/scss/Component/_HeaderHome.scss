@@ -1,0 +1,151 @@
+@import '../Themes/mixin';
+@import '../Themes/variable';
+
+.header {
+    position: fixed;
+    z-index: 1000;
+    width: 100%;
+    top: 0;
+    left: 0;
+    display: block;
+
+    .top {
+        background-color: $bg-2nd;
+        padding: 6px 0;
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .cart {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                .search {
+                    cursor: pointer;
+
+                    span {
+                        @include text ($text-fz-2xl, $text-fw-light, $text-color-3nd);
+
+                        a {
+                            color: $text-color-3nd;
+                        }
+
+                        vertical-align: baseline;
+                    }
+
+                }
+
+                .cart-shop {
+                    line-height: 1;
+                    margin: 0 10px;
+                    cursor: pointer;
+
+                    span {
+                        @include text ($text-fz-2xl, $text-fw-light, $text-color-3nd);
+                        vertical-align: baseline;
+
+                        a {
+                            color: $text-color-3nd;
+                        }
+                    }
+
+                    @include Responsive ($XS) {
+                        margin-right: 10px;
+                    }
+
+                }
+
+                .login {
+                    margin-right: 20px;
+
+                    @include Responsive ($XS) {
+                        margin-right: 10px;
+                    }
+
+                    a {
+                        text-decoration: none;
+
+                        &:hover {
+                            color: #f6b653;
+                            cursor: pointer;
+                            transition: all 0.5s;
+                        }
+
+                        @include text ($text-fz-md, $text-fw-light, $text-color-3nd);
+                    }
+                }
+
+                .register {
+                    @include Responsive ($XS) {
+                        display: none;
+                    }
+
+                    a {
+                        text-decoration: none;
+
+                        &:hover {
+                            color: #f6b653;
+                            cursor: pointer;
+                            transition: all 0.5s;
+                        }
+
+                        @include text ($text-fz-md, $text-fw-light, $text-color-3nd);
+                    }
+                }
+            }
+        }
+    }
+
+    .navbar-bottom {
+        padding: 18px 0;
+
+        @include Responsive ($XS) {
+            display: none;
+        }
+
+        .container {
+            @include Responsive ($XS) {
+                text-align: center;
+            }
+
+            a {
+                text-decoration: none;
+                margin-right: 40px;
+                position: relative;
+                @include text ($text-fz-2xl, $text-fw-regular, $text-color-primary);
+
+                @include Responsive ($XS) {
+                    margin-right: 10px;
+                    // text-align: center;
+                }
+
+                &:hover {
+                    color: #f6b653;
+                    cursor: pointer;
+                    transition: all 0.5s;
+
+                    &::after {
+                        transform: scale(1, 1);
+
+                    }
+                }
+
+                &::after {
+                    content: "";
+                    position: absolute;
+                    width: 100%;
+                    height: 3px;
+                    background-color: #f6b653;
+                    top: 30px;
+                    left: 0px;
+                    transform: scale(0, 0);
+                    transition: all 0.3s;
+                }
+
+            }
+        }
+    }
+}

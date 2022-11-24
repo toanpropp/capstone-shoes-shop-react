@@ -1,0 +1,149 @@
+@import '../Themes/mixin';
+@import '../Themes/variable';
+
+.home-component-m {
+    padding: 120px 0;
+
+    @include Responsive($XS) {
+        padding: 30px 0;
+    }
+
+    .carousel-home {
+
+        .slider {
+            .slick-dots li {
+                margin: 0 10px;
+            }
+
+            .slick-dots li.slick-active button,
+            .slick-dots li button {
+                width: 20px;
+                height: 20px;
+                border-radius: 50%;
+                background-color: $bg-3nd;
+            }
+
+            .slick-dots li.slick-active button {
+                background-color: #F21299;
+            }
+
+            .container {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 600px;
+
+                @include Responsive($XS) {
+                    display: block;
+                }
+
+                .img {
+                    width: 70%;
+                    padding: 100px;
+
+                    @include Responsive($XS) {
+                        width: 100%;
+                    }
+
+                    img {
+                        width: 100%;
+                        padding: 0;
+                        position: relative;
+                        left: -100px;
+                    }
+                }
+
+                .content {
+                    width: 30%;
+
+                    @include Responsive($XS) {
+                        width: 100%;
+                    }
+
+                    .name {
+                        @include text($text-fz-4xl, $text-fw-regular, $text-color-primary)
+                    }
+
+                    .des {
+                        @include text($text-fz-2xl, $text-fw-regular, $text-color-primary)
+                    }
+
+                    .btn-buy {
+                        @include button($text-fz-2xxl, $text-fw-light, $text-color-primary, $bg-6th, 10px 30px, none, 0, $text-color-3nd, $bg-3nd, none);
+
+                    }
+                }
+            }
+        }
+    }
+
+    .product-feature-m {
+        padding: 50px 0;
+        background-color: $bg-4th;
+        @include Responsive($XS) {
+            padding: 0;
+        }
+
+        h3 {
+            padding: 20px 50px;
+            background-image: linear-gradient(180deg, #F21299 0%, #1B02B5 100%);
+            text-align: center;
+            margin-bottom: 50px;
+            @include text($text-fz-2xl, $text-fw-regular, $text-color-3nd);
+        }
+
+        .container {
+            .product-list-m {
+                .row-product-m {
+
+                    .product-item-m {
+                        background-color: $bg-primary;
+                        display: flex;
+                        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+                        margin-bottom: 20px;
+                        justify-content: center;
+                        align-items: center;
+                        flex-direction: row;
+
+                        .img-m {
+                            display: block;
+                            img {
+                                width: 100%;
+                            }
+                        }
+
+                        .cart-info-m {
+                            padding: 10px;
+
+                            .name-des-m {
+                                margin-bottom: 10px;
+
+                                .name-m {
+                                    @include text ($text-fz-md, $text-fw-light, $text-color-5th);
+                                }
+
+                                .des-m {
+                                    @include text ($text-fz-md, $text-fw-light, $text-color-6th);
+                                    margin-bottom: 4px;
+                                }
+
+                                .cost-m {
+                                    @include text ($text-fz-2xxl, $text-fw-semibold, $text-color-4th);
+
+                                }
+                            }
+
+                            .view-detail-m {
+                                @include button($text-fz-sm, $text-fw-light, $text-color-8th, $bg-9th, 6px 10px, none, 0, $text-color-3nd, $bg-3nd, none);
+                                text-decoration: none;
+                                transition: all 0.3s;
+                            }
+                        }
+                    }
+
+
+                }
+            }
+        }
+    }
+}

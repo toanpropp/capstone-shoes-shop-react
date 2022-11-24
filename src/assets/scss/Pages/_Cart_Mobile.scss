@@ -1,0 +1,92 @@
+@import '../Themes/mixin';
+@import '../Themes/variable';
+
+.cart-shoes-m {
+    padding: 70px 0;
+
+    .cart-title-m {
+        text-align: center;
+        @include text($text-fz-3xl, $text-fw-regular, $text-color-primary);
+    }
+
+    .cart-form-m {
+        .container {
+            .cart-item-m {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-bottom: 10px;
+                box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+
+                .img-m {
+                    width: 30%;
+
+                    img {
+                        width: 100%;
+                    }
+                }
+
+                .info-m {
+                    width: 60%;
+
+                    .name-m {
+                        @include text ($text-fz-md, $text-fw-light, #f6b653);
+                    }
+
+                    .des-m {
+                        @include text ($text-fz-md, $text-fw-light, $text-color-6th);
+                        margin-bottom: 4px;
+                    }
+
+                    .price-m {
+                        @include text ($text-fz-sm, $text-fw-semibold, $text-color-4th);
+
+                    }
+
+                    .increase-decrease-m {
+                        border: 1px solid #ccc;
+                        display: inline-block;
+                        outline: none;
+
+                        .increase-m {
+                            border: none;
+                            border-right: 1px solid #ccc;
+                            padding: 4px 6px;
+                        }
+
+                        .quantity-m {
+                            font-size: 14px;
+                            color: red;
+                            padding: 0 10px;
+                        }
+
+                        .decrease-m {
+                            outline: none;
+
+                            border: none;
+                            border-left: 1px solid #ccc;
+                            padding: 4px 6px;
+                        }
+
+                    }
+                }
+
+                .remove-item {
+                    align-self: start;
+                    color: red;
+                    font-size: 20px;
+                    cursor: pointer;
+
+                }
+            }
+
+            .order {
+                text-align: right;
+
+                .btn-order {
+                    @include button($text-fz-sm, $text-fw-semibold, $text-color-3nd, $bg-12th, 4px 6px, none, 4px, $text-color-5th, $bg-3nd, none)
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,152 @@
+@import '../Themes/mixin';
+@import '../Themes/variable';
+
+.home-component {
+    padding: 120px 0;
+
+    .carousel-home {
+        .slider {
+            .slick-dots li {
+                margin: 0 10px;
+            }
+
+            .slick-dots li.slick-active button,
+            .slick-dots li button {
+                width: 20px;
+                height: 20px;
+                border-radius: 50%;
+                background-color: $bg-3nd;
+            }
+
+            .slick-dots li.slick-active button {
+                background-color: #F21299;
+            }
+
+            .container {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 600px;
+
+                .img {
+                    width: 70%;
+                    padding: 100px;
+
+                    img {
+                        width: 100%;
+                    }
+                }
+
+                .content {
+                    width: 30%;
+
+                    .name {
+                        @include text($text-fz-4xl, $text-fw-regular, $text-color-primary)
+                    }
+
+                    .des {
+                        @include text($text-fz-2xl, $text-fw-regular, $text-color-primary)
+                    }
+
+                    .btn-buy {
+                        @include button($text-fz-2xxl, $text-fw-light, $text-color-primary, $bg-6th, 10px 30px, none, 0, $text-color-3nd, $bg-3nd, none);
+
+                    }
+                }
+            }
+        }
+    }
+
+    .product-feature {
+        padding: 50px 0;
+        background-color: $bg-4th;
+
+        h3 {
+            padding: 20px 50px;
+            width: 50%;
+            background-image: linear-gradient(180deg, #F21299 0%, #1B02B5 100%);
+            text-align: left;
+            margin-bottom: 50px;
+            @include text($text-fz-4xl, $text-fw-regular, $text-color-3nd);
+
+            @include Responsive ($XS) {
+                @include text($text-fz-3xl, $text-fw-regular, $text-color-primary);
+            }
+        }
+
+        .container {
+            .product-list {
+                .row-product {
+                    display: grid;
+                    grid-template-columns: 1fr 1fr 1fr;
+                    gap: 30px;
+
+                    .product-item {
+                        background-color: $bg-primary;
+                        display: flex;
+                        flex-direction: column;
+                        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+
+
+                        .cart-info {
+                            flex-grow: 1;
+
+                            .img {
+                                padding: 45px 57px 0 57px;
+
+                                img {
+                                    width: 100%;
+                                    object-fit: cover;
+                                }
+                            }
+
+
+                            .name-des {
+                                padding: 10px 20px;
+                                display: flex;
+                                flex-direction: column;
+
+                                .name {
+                                    flex: 1;
+                                    @include text ($text-fz-2xl, $text-fw-light, $text-color-2nd);
+                                }
+
+                                .des {
+                                    flex: 1;
+                                    @include text ($text-fz-2xl, $text-fw-light, $text-color-2nd);
+                                }
+                            }
+
+
+                        }
+
+                        .buy-cost {
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+
+                            .btn-buy {
+                                width: 50%;
+                                text-decoration: none;
+                                text-align: center;
+                                transition: all 0.5s;
+                                @include button($text-fz-2xxl, $text-fw-light, $text-color-primary, $bg-9th, 10px 30px, none, 0, $text-color-3nd, $bg-3nd, none);
+                            }
+
+                            .cost {
+                                width: 50%;
+                                padding: 10px 30px;
+                                background-color: $bg-7th;
+                                text-align: center;
+                                @include text ($text-fz-2xxl, $text-fw-semibold, $text-color-primary);
+
+                            }
+                        }
+                    }
+
+
+                }
+            }
+        }
+    }
+}

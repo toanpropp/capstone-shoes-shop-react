@@ -1,0 +1,55 @@
+@import '../Themes/mixin';
+@import '../Themes/variable';
+
+.profile-form {
+    padding: 120px 0;
+
+    .profile-title {
+        padding: 10px 50px;
+        background: linear-gradient(180deg, #F21299 0%, #1B02B5 100%);
+        width: 35%;
+        font-weight: 400;
+        font-size: 40px;
+        line-height: 48px;
+        color: #fefefe;
+
+    }
+
+    .container {
+        padding: 50px 0;
+
+        .row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .img {
+                width: 20%;
+
+                img {
+                    border-radius: 50%;
+                }
+            }
+
+            .col-8 {
+                .row {
+                    .form-group {
+                        .form-label {
+                            margin-top: 24px;
+                            font-size: 18px;
+                            line-height: 24px;
+                            color: #00000099;
+                        }
+
+                        input {
+                            background: rgba(33, 33, 33, 0.08);
+                            border-radius: 4px 4px 0px 0px;
+                            padding: 10px 20px;
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+}
